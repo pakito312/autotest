@@ -130,7 +130,7 @@ Ce test vérifiera que la méthode `getUserDetails()` retourne `"200 OK"` en uti
 2. **Générer des tests pour un autre répertoire (par exemple `Controllers`)** :
 
    ```bash
-   php artisan generate:tests --directory=Controllers
+   php artisan generate:tests
    ```
 
 3. **Générer des tests avec l'assertion par défaut `assertNotNull`** :
@@ -157,7 +157,7 @@ Ce test vérifiera que la méthode `getUserDetails()` retourne `"200 OK"` en uti
 
 ## Options disponibles
 
-- `--directory` : Le répertoire des classes à explorer (par défaut `Services`).
+- `--directory` : Le répertoire des classes à explorer (par défaut `Controller`).
 - `--response` : La réponse attendue pour les tests générés (par défaut `null`).
 - `--assertion` : Le type d'assertion à utiliser pour les tests (par défaut `assertNotNull`).
 - `--mock` : Les dépendances à mocker (par exemple `App\\Services\\SomeService`).
