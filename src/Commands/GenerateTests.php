@@ -1,6 +1,6 @@
 <?php
 
-namespace Paki\TestGenerator\Commands;
+namespace Paki\AutoTest\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;

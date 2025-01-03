@@ -1,9 +1,9 @@
 <?php
 
-namespace Paki\TestGenerator\Providers;
+namespace Paki\AutoTest\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Paki\TestGenerator\Commands\GenerateTests;
+use Paki\AutoTest\Commands\GenerateTests;
 
 class TestGeneratorServiceProvider extends ServiceProvider
 {
