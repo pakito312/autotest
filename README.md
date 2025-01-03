@@ -20,7 +20,7 @@ Un package Laravel pour générer automatiquement des tests unitaires pour les m
 
 2. (Optionnel) Publier la configuration :
    ```bash
-   php artisan vendor:publish --provider="Paki\TestGenerator\TestGeneratorServiceProvider"
+   php artisan vendor:publish --provider="Paki\AutoTest\TestGeneratorServiceProvider"
    ```
 
 ## Exemple d'usage
