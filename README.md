@@ -165,6 +165,3 @@ Les contributions sont les bienvenues ! Si vous souhaitez ajouter des fonctionna
 ## Licence
 
 Ce package est sous licence MIT. Consultez le fichier [LICENSE](LICENSE) pour plus de détails.
-```
-
-
