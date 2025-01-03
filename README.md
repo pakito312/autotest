@@ -85,8 +85,37 @@ public function getUserDetails()
    // Logique de la méthode
 }
 ```
-
 Ce test vérifiera que la méthode `getUserDetails()` retourne `"200 OK"` en utilisant l'assertion `assertEquals`.
+
+
+```php
+  /**
+     * @Testable
+     * @TestInput: {"name": "paki","message":"test message"}
+     * @AssertStatus 201
+     */
+    public function create(Request $request)
+    {
+        $this->validate($request, [
+            'name' => "required",
+            'message' => "required"
+        ]);
+        return response()->json([], 201);
+    }
+```
+```php
+  /**
+     * @Testable
+     * @TestResponse "User Created"
+     * @TestParam: name='test'
+     */
+    public function createUser($name)
+    {
+        return "User Created";
+    }
+```
+
+
 
 ### 5. Commande artisan pour générer les tests
 
