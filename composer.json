@@ -1,0 +1,29 @@
+{
+    "name": "paki/laravel-auto-test",
+    "description": "Package Laravel pour générer automatiquement des tests unitaires.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Paki\\AutoTest\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Paki\\AutoTest\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Paki\\TestGenerator\\Providers\\TestGeneratorServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
