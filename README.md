@@ -88,33 +88,52 @@ public function getUserDetails()
 
 Ce test vérifiera que la méthode `getUserDetails()` retourne `"200 OK"` en utilisant l'assertion `assertEquals`.
 
-## Commandes Artisan
+### 5. Commande artisan pour générer les tests
 
-Une fois que vous avez annoté vos méthodes avec `@Testable`, vous pouvez générer les tests unitaires en exécutant les commandes Artisan suivantes.
+1. **Générer des tests pour un répertoire spécifique avec une réponse et assertion personnalisées** :
 
-### 1. Générer des tests pour le répertoire `Services` avec une réponse personnalisée et une assertion personnalisée
+   Pour générer des tests pour le répertoire `Services` avec une réponse `"Success"` et une assertion `assertEquals`, vous pouvez exécuter la commande suivante :
 
-Exécutez cette commande pour générer des tests dans le répertoire `Services`, en utilisant une réponse personnalisée et une assertion `assertEquals`.
+   ```bash
+   php artisan generate:tests --directory=Services --assertion=assertEquals --response="Success"
+   ```
 
-```bash
-php artisan generate:tests --directory=Services --assertion=assertEquals --response="Success"
-```
+2. **Générer des tests pour un autre répertoire (par exemple `Controllers`)** :
 
-### 2. Générer des tests pour un autre répertoire comme `Controllers`
+   ```bash
+   php artisan generate:tests --directory=Controllers
+   ```
 
-Vous pouvez spécifier un autre répertoire en utilisant l'option `--directory`.
+3. **Générer des tests avec l'assertion par défaut `assertNotNull`** :
 
-```bash
-php artisan generate:tests --directory=Controllers
-```
+   ```bash
+   php artisan generate:tests
+   ```
 
-### 3. Générer des tests avec l'assertion par défaut `assertNotNull`
+4. **Générer des tests avec des dépendances mockées** :
 
-Si vous souhaitez utiliser l'assertion par défaut `assertNotNull`, il vous suffit d'exécuter la commande suivante sans spécifier de réponse ou d'assertion :
+   Si vous souhaitez mocker des dépendances dans vos tests, utilisez l'option `--mock` :
 
-```bash
-php artisan generate:tests
-```
+   ```bash
+   php artisan generate:tests --mock="App\\Services\\SomeService"
+   ```
+
+5. **Activer les tests de performance** :
+
+   Pour activer les tests de performance, utilisez l'option `--performance=true` :
+
+   ```bash
+   php artisan generate:tests --performance=true
+   ```
+
+## Options disponibles
+
+- `--directory` : Le répertoire des classes à explorer (par défaut `Services`).
+- `--response` : La réponse attendue pour les tests générés (par défaut `null`).
+- `--assertion` : Le type d'assertion à utiliser pour les tests (par défaut `assertNotNull`).
+- `--mock` : Les dépendances à mocker (par exemple `App\\Services\\SomeService`).
+- `--performance` : Activer les tests de performance (`true`/`false`).
+
 
 ## Structure des tests générés
 
@@ -132,6 +151,12 @@ public function testMethodName()
     $this->assertEquals('Success', $result);
 }
 ```
+## Limitations et À venir
+
+- Ce package génère des tests de base pour des méthodes simples. Les tests complexes, notamment ceux qui nécessitent une logique plus avancée, peuvent nécessiter une personnalisation manuelle.
+- La prise en charge des tests de performance est encore limitée aux tests de base sur le temps d'exécution de la méthode.
+
+---
 
 ## Contributions
 

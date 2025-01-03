@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Paki\\TestGenerator\\Providers\\TestGeneratorServiceProvider"
+                "Paki\\AutoTest\\Providers\\TestGeneratorServiceProvider"
             ]
         }
     },
