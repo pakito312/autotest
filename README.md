@@ -167,8 +167,4 @@ Les contributions sont les bienvenues ! Si vous souhaitez ajouter des fonctionna
 Ce package est sous licence MIT. Consultez le fichier [LICENSE](LICENSE) pour plus de détails.
 ```
 
-### Changements apportés :
-1. **Installation** : Ajout de l'étape d'installation pour installer le package via Composer et publier le fichier de configuration.
-2. **Exemples d'usage** : Intégration des exemples pratiques d'usage pour la génération de tests unitaires avec `@Testable`, `@TestResponse`, et `@assertion`.
-3. **Commandes Artisan** : Ajout de sections détaillant les commandes Artisan pour générer des tests dans différents répertoires avec des options de réponse et d'assertion.
-4. **Structure des tests générés** : Détails sur la façon dont les tests seront générés, ce qu'ils contiendront, et à quoi ils ressembleront.
+
